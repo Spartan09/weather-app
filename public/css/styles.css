@@ -55,3 +55,37 @@ button {
     color: white;
     padding: 8px;
 }
+
+.weather-info-container {
+    margin-top: 18px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        "icon msg-1"
+        "icon msg-2";
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 20px;
+}
+
+.weather-icon {
+    grid-area: icon;
+    display: none;
+    border-radius: 18%;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.weather-icon,
+.msg-1,
+.msg-2 {
+    margin: 0;
+}
+
+.msg-1 {
+    grid-area: msg-1;
+}
+
+.msg-2 {
+    grid-area: msg-2;
+}

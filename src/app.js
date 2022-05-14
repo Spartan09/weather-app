@@ -54,10 +54,11 @@ app.get('/weather', (req, res) => {
             return res.send({ error });
         }
         const { name, region, country } = forecastData.location
-        const { weather_descriptions, temperature, precip } = forecastData.current
+        const { weather_descriptions, temperature, precip, weather_icons } = forecastData.current
         res.send({
             location: `${name}, ${region}, ${country}`,
-            forecast: `${weather_descriptions}. It is currently ${temperature} degrees out. There is a ${precip}% chance of rain.`
+            forecast: `${weather_descriptions}. It is currently ${temperature} degrees out. There is a ${precip}% chance of rain.`,
+            icon: weather_icons
         });
     });
 })
