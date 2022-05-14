@@ -37,7 +37,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        helpText: `It is simple really, just go to the weather page and search ༼ つ ◕_◕ ༽つ`,
+        helpText: `It is simple really, just go to the Weather page and search ༼ つ ◕_◕ ༽つ`,
         name: 'Ayushman'
     })
 })
